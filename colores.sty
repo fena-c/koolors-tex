@@ -1,0 +1,151 @@
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{colores}[2022/11/21 Formato bonito]
+\RequirePackage{xcolor}
+\RequirePackage{amsthm}
+\RequirePackage{mdframed}
+\RequirePackage{titlesec}
+\RequirePackage{koolors}
+
+
+%\definecolor{color1}{HTML}{b2908e}
+%\definecolor{color12}{HTML}{997c7a}
+%\definecolor{color2}{HTML}{a9b28e}
+%\definecolor{color22}{HTML}{91997a}
+%\definecolor{color3}{HTML}{8eb29f}
+%\definecolor{color32}{HTML}{7a9988}
+%\definecolor{color4}{HTML}{8e9bb2}
+%\definecolor{color42}{HTML}{7a8499}
+%\definecolor{color5}{HTML}{ad8eb2}
+%\definecolor{color52}{HTML}{947a99}
+%\definecolor{bg}{HTML}{e5cfce}
+%\definecolor{bg2}{HTML}{e5cfce}
+
+%\definecolor{color1}{HTML}{C3FFC9}
+%\definecolor{color12}{HTML}{A1D2A6}
+%
+%\definecolor{color2}{HTML}{F9FFA4}
+%\definecolor{color22}{HTML}{D6DC8C}
+%
+%\definecolor{color3}{HTML}{FFE7C3}
+%\definecolor{color32}{HTML}{D6DC8C}
+%
+%\definecolor{color4}{HTML}{FFADF7}
+%\definecolor{color42}{HTML}{FFDCFA}
+%
+%\definecolor{color5}{HTML}{D0E3FF}
+%\definecolor{color52}{HTML}{BACBE3}
+%
+%\definecolor{bg}{HTML}{FFF7EB}
+%\definecolor{bg2}{HTML}{F8F0E5}
+
+
+\pagecolor{bg}
+
+
+
+
+\titlespacing\section{0pt}{4em plus 4em minus 2em}{4em plus 4em minus 2em}
+\titlespacing\subsection{0pt}{4em plus 4em minus 2em}{4em plus 4em minus 2em}
+
+
+\titleformat{\section}[frame]
+{\normalfont}
+{\filright
+\footnotesize
+\enspace LA SECCIÓN \thesection\enspace}
+{8pt}
+{\Large\bfseries\filcenter}
+
+
+\titleformat{\subsection}
+{\titlerule
+\vspace{.8ex}
+\normalfont\itshape}
+{\thesubsection.}{.5em}{\Large}
+
+
+\theoremstyle{plain} 
+
+
+
+
+\newmdtheoremenv[linecolor=color2,
+                linewidth = 4px,
+                shadow = true,
+                innertopmargin = 0px,
+                shadowsize = 2px,
+                shadowcolor = color22,
+                nobreak = true,
+                backgroundcolor = color2]{lemma}{Lema}[section]
+\newmdtheoremenv[linecolor=color1,
+                linewidth = 4px,
+                shadow = true,
+                nobreak = true,
+                innertopmargin = 0px,
+                shadowsize = 2px,
+                shadowcolor = color12,
+                backgroundcolor = color1]{thm}{Teorema}[section]
+\newmdtheoremenv[linecolor=color3,
+                linewidth = 4px,
+                shadow = true,
+                shadowsize = 2px,
+                nobreak = true,
+                shadowcolor = color32,
+                backgroundcolor = color3]{prop}{Proposición}[section]
+\newmdtheoremenv[linecolor=color5,
+                linewidth = 4px,
+                shadow = true,
+                shadowsize = 2px,
+                nobreak = true,
+                innertopmargin = 0px,
+                shadowcolor = color52,
+                backgroundcolor = color5]{cor}{Corolario}[section]
+
+\theoremstyle{definition} 
+
+\newmdtheoremenv[linecolor=color4,
+                linewidth = 4px,
+                topline = false,
+                innertopmargin = 0px,
+                nobreak = true,
+                bottomline = false,
+                rightline= false,
+                leftmargin = 3em,
+                rightmargin = 2em,
+                backgroundcolor = color42]{defi}{Definición}[section]
+%\newtheorem{defi}{Definición}[section]   
+
+\theoremstyle{remark} 
+\newtheorem*{remark}{Observación}  
+
+\mdfdefinestyle{proof}{linewidth = 0px,
+%rightline = false, 
+%topline = false, 
+%everyline = true,
+backgroundcolor = bg2, 
+%linecolor = color4,
+}
+
+\surroundwithmdframed[style=proof]{proof}
+
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\e}{\varepsilon}  
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator*{\Span}{span}
+\DeclareMathOperator*{\quot}{Quot}
+\renewcommand{\phi}{\varphi}
+\newcommand{\acts}{\ \rotatebox[origin=c]{-90}{$\circlearrowright$}\ }
+
+
+
+
+
+
+
